@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnInscription"
+        android:layout_width="366dp"
+        android:layout_height="196dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="65dp"
+        android:text="INSCRIPTION"
+        app:layout_constraintBottom_toTopOf="@+id/btnConnexion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnConnexion"
+        android:layout_width="323dp"
+        android:layout_height="197dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="43dp"
+        android:text="CONNEXION"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Textbvn"
+        android:layout_width="217dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginEnd="97dp"
+        android:layout_marginBottom="20dp"
+        android:text="Bienvenue !"
+        app:layout_constraintBottom_toTopOf="@+id/btnInscription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
