@@ -5,8 +5,8 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-    private static String url = "jdbc:mysql://192.168.1.48:3306/androidbd";
-    private static String user ="androidbd";
+    private static String url = "jdbc:mysql://192.168.0.30:3306/androidbd";
+    private static String user ="android";
     private static String password ="";
     private static Connection connection;
     static {

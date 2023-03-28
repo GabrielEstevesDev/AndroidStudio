@@ -30,9 +30,9 @@ public class CreateTask extends AppCompatActivity {
                 String Titre=TextTitre.getText().toString();
                 EditText TextDesc = findViewById(R.id.addTaskDescription);
                 String Desc=TextDesc.getText().toString();
-               Task t=new Task(Titre,Desc);
+                Task t=new Task(Titre,Desc);
 
-                if(RequetesBD.insertTASK(Titre,Desc, Connexion.getName())){
+                if(RequetesBD.insertTASK(Titre,Desc, Connexion.getPseudo())){
                     ListTask.GetList().add(t);
 
                     Intent intent = new Intent(getApplicationContext(), Todo.class);

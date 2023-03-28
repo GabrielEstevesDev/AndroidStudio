@@ -24,7 +24,8 @@ public class Todo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo);
         TextView bv = findViewById(R.id.bienvenue);
-        bv.setText("Bonjour "+ Connexion.getName() +" !");
+        String pseudo = Connexion.getPseudo();
+        bv.setText("Bonjour "+ pseudo +" !");
         TextView btnTask = findViewById(R.id.addTaskCreate);
         recyclerView = findViewById(R.id.taskRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

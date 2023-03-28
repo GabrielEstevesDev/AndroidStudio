@@ -24,11 +24,12 @@ public class Inscription extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText textmail =findViewById(R.id.editTextEmail);
-                String email = textmail.getText().toString();
+                String email = textmail.getText().toString().trim();
                 EditText textpseudo=findViewById(R.id.editTextPseudo);
-                String pseudo = textpseudo.getText().toString();
+                String pseudo = textpseudo.getText().toString().trim();
+                pseudo = pseudo.substring(0, 1).toUpperCase() + pseudo.substring(1).toLowerCase();
                 EditText textPassword = findViewById(R.id.editTextPassword);
-                String password = textPassword.getText().toString();
+                String password = textPassword.getText().toString().trim();
                 if(RequetesBD.insertUser(email,pseudo,password)){
                     Intent intent = new Intent(getApplicationContext(), Connexion.class);
                     startActivity(intent);

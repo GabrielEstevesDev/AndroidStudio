@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -36,7 +35,7 @@ public class Connexion extends AppCompatActivity {
                 try {
                     if (resultSet.next()) {
                         name=email;
-                        RequetesBD.setTask(name);
+                        RequetesBD.setTasks(name);
                         Intent intent = new Intent(getApplicationContext(), Todo.class);
                         startActivity(intent);
                     } else {
@@ -51,7 +50,7 @@ public class Connexion extends AppCompatActivity {
         });
     }
 
-    public static String getName(){
+    public static String getPseudo(){
         return  name;
     }
 }

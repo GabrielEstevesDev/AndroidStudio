@@ -68,7 +68,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                         int position = getAdapterPosition();
                         if (position != RecyclerView.NO_POSITION) {
                             String titre =tasks.get(position).getTitre();
-                            RequetesBD.deleteTask(titre, Connexion.getName());
+                            RequetesBD.deleteTask(titre, Connexion.getPseudo());
                             tasks.remove(position);
                             notifyItemRemoved(position);
                         }

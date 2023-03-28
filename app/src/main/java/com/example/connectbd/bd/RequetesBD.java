@@ -29,7 +29,7 @@ public class RequetesBD {
         }
         return resultSet;
     }
-    public static void setTask(String pseudo){
+    public static void setTasks(String pseudo){
         Connection bd = getConnexion();
         String query = "SELECT * FROM task WHERE pseudo=? ";
         PreparedStatement statement = null;
