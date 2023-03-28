@@ -44,6 +44,7 @@
         android:layout_height="74dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="220dp"
+        android:backgroundTint="@color/colorAccent"
         android:text="Connexion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +59,7 @@
         android:layout_marginEnd="165dp"
         android:layout_marginBottom="30dp"
         android:text="Pseudo"
+        android:textColor="@color/colorAccent"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textEmail"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,8 +74,21 @@
         android:layout_marginEnd="152dp"
         android:layout_marginBottom="30dp"
         android:text="Password"
+        android:textColor="@color/colorAccent"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/backConnexion"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="332dp"
+        android:layout_marginBottom="608dp"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/arrowleft"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

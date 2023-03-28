@@ -7,8 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.connectbd.MainActivity;
 import com.example.connectbd.R;
 import com.example.connectbd.todo.Todo;
 import com.example.connectbd.bd.RequetesBD;
@@ -20,9 +22,18 @@ public class Connexion extends AppCompatActivity {
     private static String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
         name=null;
+        ImageView backConnexion = findViewById(R.id.backConnexion);
+        backConnexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
         Button button = findViewById(R.id.Connexion);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

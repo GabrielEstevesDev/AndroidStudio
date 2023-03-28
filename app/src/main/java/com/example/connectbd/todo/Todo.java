@@ -7,8 +7,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.connectbd.MainActivity;
 import com.example.connectbd.login.Connexion;
 import com.example.connectbd.R;
 
@@ -21,6 +23,7 @@ public class Todo extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_todo);
         TextView bv = findViewById(R.id.bienvenue);
@@ -44,6 +47,15 @@ public class Todo extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), CreateTask.class);
+                startActivity(intent);
+            }
+        });
+
+        Button deconnexion = findViewById(R.id.btnDeconnexion);
+        deconnexion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }
         });
