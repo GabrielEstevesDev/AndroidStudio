@@ -8,8 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
+import com.example.connectbd.todo.Todo;
 import com.example.connectbd.bd.RequetesBD;
 
 import java.sql.ResultSet;
@@ -34,6 +34,8 @@ public class Connexion extends AppCompatActivity {
                 try {
                     if (resultSet.next()) {
                         Log.d("user","il existe");
+                        Intent intent = new Intent(getApplicationContext(), Todo.class);
+                        startActivity(intent);
                     } else {
                         Log.d("user","nonnnnnnnnnnn");
                     }

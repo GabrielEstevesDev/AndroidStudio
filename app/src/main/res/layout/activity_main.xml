@@ -40,6 +40,8 @@
         android:layout_marginEnd="97dp"
         android:layout_marginBottom="20dp"
         android:text="Bienvenue !"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/btnInscription"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

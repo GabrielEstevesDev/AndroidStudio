@@ -25,4 +25,23 @@ public class RequetesBD {
         }
         return resultSet;
     }
-}
+
+    public static Boolean insertUser(String email, String pseudo, String password) {
+        Connection bd = getConnexion();
+        String query = "INSERT INTO utilisateurs VALUES(?,?,?)";
+        PreparedStatement statement = null;
+        ResultSet resultSet;
+        try {
+            statement = bd.prepareStatement(query);
+            statement.setString(1, password);
+            statement.setString(2, pseudo);
+            statement.setString(3, email);
+           statement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return true;
+    }
+    }
+
