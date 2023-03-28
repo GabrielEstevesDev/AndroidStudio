@@ -8,24 +8,21 @@
 
     <Button
         android:id="@+id/btnInscription"
-        android:layout_width="366dp"
-        android:layout_height="196dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="65dp"
+        android:layout_width="318dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="88dp"
         android:text="INSCRIPTION"
         app:layout_constraintBottom_toTopOf="@+id/btnConnexion"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btnConnexion"
-        android:layout_width="323dp"
-        android:layout_height="197dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="43dp"
+        android:layout_width="317dp"
+        android:layout_height="81dp"
+        android:layout_marginBottom="176dp"
         android:text="CONNEXION"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,11 +31,9 @@
 
     <TextView
         android:id="@+id/Textbvn"
-        android:layout_width="217dp"
-        android:layout_height="94dp"
-        android:layout_marginStart="97dp"
-        android:layout_marginEnd="97dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="183dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="76dp"
         android:text="Bienvenue !"
         android:textAlignment="center"
         android:textSize="24sp"

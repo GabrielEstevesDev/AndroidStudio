@@ -1,8 +1,8 @@
 package com.example.connectbd.todo;
 
-public class Task {
-    private String titre;
 
+public class Task  {
+    private String titre;
     private String description;
 
     public Task(String a , String b){
@@ -17,4 +17,5 @@ public class Task {
     public String getDesc() {
         return description;
     }
+
 }

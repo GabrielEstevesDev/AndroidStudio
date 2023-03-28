@@ -1,4 +1,4 @@
-package com.example.connectbd;
+package com.example.connectbd.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,10 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.connectbd.R;
 import com.example.connectbd.bd.RequetesBD;
-
-import java.sql.ResultSet;
+import com.example.connectbd.login.Connexion;
 
 public class Inscription extends AppCompatActivity {
 
@@ -31,6 +32,11 @@ public class Inscription extends AppCompatActivity {
                 if(RequetesBD.insertUser(email,pseudo,password)){
                     Intent intent = new Intent(getApplicationContext(), Connexion.class);
                     startActivity(intent);
+                }
+                else{
+                    String message = "Erreur : Nom d'utilisateur déjà existant.";
+                    // Affichez le message d'erreur en utilisant Toast
+                    Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- La couleur de fond du rectangle -->
+    <solid android:color="@android:color/white" />
+
+    <!-- La couleur de la bordure du rectangle -->
+    <stroke
+        android:width="2dp"
+        android:color="@android:color/darker_gray" />
+
+    <!-- La courbure des coins du rectangle -->
+    <corners android:radius="8dp" />
+</shape>

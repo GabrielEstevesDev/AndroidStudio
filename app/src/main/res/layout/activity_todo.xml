@@ -20,6 +20,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/bienvenue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -49,25 +50,23 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1">
-
-
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/taskRecycler"
-                android:layout_width="363dp"
-                android:layout_height="565dp" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
 
         </FrameLayout>
 
         <TextView
             android:id="@+id/addTaskCreate"
-            android:layout_width="wrap_content"
-            android:layout_height="70dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:layout_weight="0.5"
+            android:layout_weight="0"
             android:drawableLeft="@drawable/ic_add_black_24dp"
             android:drawablePadding="10dp"
             android:paddingTop="10dp"

@@ -1,4 +1,4 @@
-package com.example.connectbd;
+package com.example.connectbd.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.example.connectbd.R;
 import com.example.connectbd.todo.Todo;
 import com.example.connectbd.bd.RequetesBD;
 
@@ -16,12 +18,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Connexion extends AppCompatActivity {
-
+    private static String name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
-
+        name=null;
         Button button = findViewById(R.id.Connexion);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,16 +35,23 @@ public class Connexion extends AppCompatActivity {
                 ResultSet resultSet = RequetesBD.getUser(email,password);
                 try {
                     if (resultSet.next()) {
-                        Log.d("user","il existe");
+                        name=email;
+                        RequetesBD.setTask(name);
                         Intent intent = new Intent(getApplicationContext(), Todo.class);
                         startActivity(intent);
                     } else {
-                        Log.d("user","nonnnnnnnnnnn");
+                        String message = "Erreur : Nom d'utilisateur ou mot de passe incorrect.";
+                        // Affichez le message d'erreur en utilisant Toast
+                        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
                     }
                 } catch (SQLException e) {
                     throw new RuntimeException(e);
                 }
             }
         });
+    }
+
+    public static String getName(){
+        return  name;
     }
 }
