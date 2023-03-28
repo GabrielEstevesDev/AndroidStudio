@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:background="@color/colorPrimary"
     android:paddingLeft="20dp"
-    tools:context=".activity.MainActivity">
+    tools:context="todo.Todo">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -52,11 +52,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1">
 
-            <ImageView
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:id="@+id/noDataImage"
-                android:layout_gravity="center"/>
+
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/taskRecycler"

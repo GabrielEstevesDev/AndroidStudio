@@ -1,7 +1,6 @@
 package com.example.connectbd.todo;
 
 
-import static com.example.connectbd.todo.Todo.itemsAdapter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,7 +28,7 @@ public class CreateTask extends AppCompatActivity {
                 EditText TextDesc = findViewById(R.id.addTaskDescription);
                 String Desc=TextDesc.getText().toString();
                 Task t=new Task(Titre,Desc);
-                itemsAdapter.add(t);
+                ListTask.GetList().add(t);
                 Intent intent = new Intent(getApplicationContext(), Todo.class);
                 startActivity(intent);
             }

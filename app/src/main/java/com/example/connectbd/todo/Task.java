@@ -1,12 +1,20 @@
 package com.example.connectbd.todo;
 
 public class Task {
-    private String Titre;
+    private String titre;
 
-    private String Description;
+    private String description;
 
     public Task(String a , String b){
-        Titre=a;
-        Description=b;
+        titre=a;
+        description=b;
+    }
+
+    public String getTitre(){
+        return titre;
+    }
+
+    public String getDesc() {
+        return description;
     }
 }
