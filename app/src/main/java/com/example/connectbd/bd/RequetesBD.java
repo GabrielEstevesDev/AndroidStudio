@@ -10,7 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class RequetesBD {
-    public static Connection getConnexion(){
+    private static Connection getConnexion(){
         return DatabaseConnection.getConnection();
     }
     public static ResultSet getUser(String email, String password){

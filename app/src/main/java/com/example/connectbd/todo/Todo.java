@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.connectbd.MainActivity;
+import com.example.connectbd.main.MainActivity;
 import com.example.connectbd.login.Connexion;
 import com.example.connectbd.R;
 

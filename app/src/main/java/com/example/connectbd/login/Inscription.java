@@ -10,10 +10,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.connectbd.MainActivity;
+import com.example.connectbd.main.MainActivity;
 import com.example.connectbd.R;
 import com.example.connectbd.bd.RequetesBD;
-import com.example.connectbd.login.Connexion;
 
 public class Inscription extends AppCompatActivity {
 
