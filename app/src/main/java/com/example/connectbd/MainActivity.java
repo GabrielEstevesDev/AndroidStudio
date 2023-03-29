@@ -3,6 +3,7 @@ package com.example.connectbd;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -23,20 +24,6 @@ public class MainActivity extends AppCompatActivity {
         StrictMode.ThreadPolicy threadPolicy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(threadPolicy);
-       /* try {
-            Connection bd = getConnexion();
-            String selectSql = "SELECT * FROM utilisateurs";
-            PreparedStatement statement = null;
-            statement = bd.prepareStatement(selectSql);
-            ResultSet resultSet = statement.executeQuery(selectSql);
-            while (resultSet.next()) {
-                Log.d("tag",resultSet.getString(1)+resultSet.getString(2)+resultSet.getString(3));
-            }
-            resultSet.close();
-            statement.close();
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }*/
 
         Button button = findViewById(R.id.btnConnexion);
         button.setOnClickListener(new View.OnClickListener() {
